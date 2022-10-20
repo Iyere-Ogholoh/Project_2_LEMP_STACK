@@ -24,3 +24,49 @@
 
 ![nginx installation](./images/NGINX_images/sudo_apt_install_nginx.PNG)
 
+`sudo systemctl status nginx`
+
+![nginx status](./images/NGINX_images/nginx_status.PNG)
+
+OPEN TCP P0RT 80
+
+![open tcp port 80](./images/NGINX_images/tcp_port_80.PNG)
+
+`curl http://35.180.156.219`
+
+![curl http](./images/NGINX_images/curl_http.PNG)
+
+[public ip address](http://35.180.156.219)
+
+![ngnix web page](./images/NGINX_images/ngnix_web_page.PNG)
+
+`curl -s http://35.180.156.219/latest/meta-data/public-ipv4`
+
+![retrieving public ip](./images/NGINX_images/public_ip_retrieve.PNG)
+
+### INSTALLING MYSQL
+
+`sudo apt install mysql-server`
+
+![sql server installation](./images/mysql_installation/mysql_kernel_upgrade.PNG)
+
+![sql server installation](./images/mysql_installation/mysql_outdated_libraries.PNG)
+
+![sql server installation](./images/mysql_installation/mysql_server_installation.PNG)
+
+`sudo mysql`
+
+![sudo mysql](./images/mysql_installation/sudo_mysql.PNG)
+
+`sudo mysql_secure_installation`
+
+![mysql_secure_installation](./images/mysql_installation/msql_secure_installation_page1.PNG)
+
+![mysql_secure_installation](./images/mysql_installation/mysql_secure_installation_page2.PNG)
+
+`sudo mysql -p`
+
+![test to log into mysql](./images/mysql_installation/mysql_login_test.PNG)
+
+INSTALLING PHP
+
