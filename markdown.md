@@ -70,3 +70,69 @@ OPEN TCP P0RT 80
 
 INSTALLING PHP
 
+`sudo apt install php-fpm php-mysql`
+
+![installing php-fpm and php-mysql](./images/php_installation/pending_kernel_upgrade.PNG)
+
+![installing php-fpm and php-mysql](./images/php_installation/outdated_libraries.PNG)
+
+![installing php-fpm and php-mysql](./images/php_installation/php_fph-php_mysql_installation.PNG)
+
+CONFIGURING NGINX TO USE PHP PROCESSOR
+
+`sudo mkdir /var/www/projectLEMP`
+
+`sudo chown -R $USER:$USER /var/www/projectLEMP`
+
+`sudo nano /etc/nginx/sites-available/projectLEMP`
+
+input nano code
+
+#/etc/nginx/sites-available/projectLEMP
+
+server {
+    listen 80;
+    server_name projectLEMP www.projectLEMP;
+    root /var/www/projectLEMP;
+
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+     }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+}
+
+`sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`
+
+`sudo nginx -t`
+
+![nano syntax error test](./images/configuring_nginx_4_php_processor/nano_syntax_error_test.PNG)
+
+`sudo unlink /etc/nginx/sites_enabled/default`
+
+`sudo systemctl reload nginx`
+
+`sudo echo 'Hello LEMP from hostname' $(curl -s http://35.180.156.219/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://35.180.156.219latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
+
+[website url](http://35.180.156.219/)
+
+![website screenshot](./images/configuring_nginx_4_php_processor/website_screenshot.PNG)
+
+ec2-35-180-156-219.eu-west-3.compute.amazonaws.com
+
+![public DNS](./images/configuring_nginx_4_php_processor/public_DNS.PNG)
+
+TESTING PHP WITH NGINX
+
+
+
