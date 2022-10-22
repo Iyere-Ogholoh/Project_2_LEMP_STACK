@@ -164,7 +164,21 @@ RETRIEVING DATA FROM MYSQL DATABASE WITH PHP
 ![show databases command](./images/retrieving_data_from_mysqlDatabase_using_php/show_databases_command.PNG)
 
 
+`CREATE USER example_user @ IDENTIFIED WITH mysql_native_password BY 'HappyKonga@802';`
 
+![creating user named example_user](./images/retrieving_data_from_mysqlDatabase_using_php/created_user_named_example_user.PNG)
+
+`GRANT ALL ON example_database.* TO example_user @;`
+
+1[granting permissions to created used named example_user](./images/retrieving_data_from_mysqlDatabase_using_php/granting_permissions_to_example_user.PNG)
+
+`exit`
+
+![exiting mysql](./images/retrieving_data_from_mysqlDatabase_using_php/exiting_mysql.PNG)
+
+`mysql -u example_user -p`
+
+![example_user login](./images/retrieving_data_from_mysqlDatabase_using_php/example_user_login.PNG)
 
 
 
