@@ -134,5 +134,21 @@ ec2-35-180-156-219.eu-west-3.compute.amazonaws.com
 
 TESTING PHP WITH NGINX
 
+`sudo nano /var/www/projectLEMP/info.php`
+
+<?php
+phpinfo();
+
+![nano php code insertion](./images/testing_php_with_nginx/php_script_on_nano_editor.PNG)
+
+[ip/info.php](http://35.180.156.219/info.php)
+
+![browser screensot after inserting test php file](./images/testing_php_with_nginx/browser_page_php_script.PNG)
+
+`sudo rm /var/www/projectLEMP/info.php`
+
+![removing info.php file](./images/testing_php_with_nginx/removed_info.php_file.PNG)
+
+
 
 
