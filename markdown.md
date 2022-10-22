@@ -149,6 +149,22 @@ phpinfo();
 
 ![removing info.php file](./images/testing_php_with_nginx/removed_info.php_file.PNG)
 
+RETRIEVING DATA FROM MYSQL DATABASE WITH PHP
+
+`sudo mysql -p`
+
+![logging into mysql database](./images/retrieving_data_from_mysqlDatabase_using_php/logging_into_mysql_database.PNG)
+
+` 'create database example_database;`
+
+![creating database named example_database](./images/retrieving_data_from_mysqlDatabase_using_php/example_database_creation.PNG)
+
+`show databases;`
+
+![show databases command](./images/retrieving_data_from_mysqlDatabase_using_php/show_databases_command.PNG)
+
+
+
 
 
 
