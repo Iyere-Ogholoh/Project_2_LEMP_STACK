@@ -180,5 +180,32 @@ RETRIEVING DATA FROM MYSQL DATABASE WITH PHP
 
 ![example_user login](./images/retrieving_data_from_mysqlDatabase_using_php/example_user_login.PNG)
 
+`SHOW DATABASES;`
 
+![SHOW DATABASES COMMAND](./images/retrieving_data_from_mysqlDatabase_using_php/SHOW_DATABASES_command2.PNG)
+
+CREATE TABLE example_database.todo_list(
+    -> item_id INT AUTO_INCREMENT,
+    -> content VARCHAR(255),
+    -> PRIMARY KEY(item_id));
+
+![creating table named todo_list inside example_user database](./images/retrieving_data_from_mysqlDatabase_using_php/created_table_in_example_database.PNG)
+
+mysql>  INSERT INTO example_database.todo_list (content) VALUE("My first important item");
+
+mysql> INSERT INTO example_database.todo_list (content) VALUE("My second important item");
+
+mysql> INSERT INTO example_database.todo_list (content) VALUE("My third important item");
+
+mysql> INSERT INTO example_database.todo_list (content) VALUE("Visit the dentist");
+
+mysql> INSERT INTO example_database.todo_list (content) VALUE("Study for at least 6 hours daily");
+
+![inserting rows of content](./images/retrieving_data_from_mysqlDatabase_using_php/inserting_rows_of_content.PNG)
+
+SELECT * FROM example_database.todo_list;
+
+mysql> exit
+
+![mysql exit](./images/retrieving_data_from_mysqlDatabase_using_php/mysql_exit_command.PNG)
 
