@@ -207,5 +207,36 @@ SELECT * FROM example_database.todo_list;
 
 mysql> exit
 
+
 ![mysql exit](./images/retrieving_data_from_mysqlDatabase_using_php/mysql_exit_command.PNG)
+
+`nano /var/www/projectLEMP/todo_list.php`
+
+Input nano script
+
+<?php
+$user = "example_user";
+$password = "password";
+$database = "example_database";
+$table = "todo_list";
+
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+![nano script insertion](./images/retrieving_data_from_mysqlDatabase_using_php/nano_script_inserted.PNG)
+
+[testing access to webpage](http://35.180.156.219/todo_list.php)
+
+![webpage screenshot](./images/retrieving_data_from_mysqlDatabase_using_php/webpage_screenshot.PNG)
+
+END OF PROJECT
 
